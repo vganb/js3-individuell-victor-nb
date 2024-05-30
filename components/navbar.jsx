@@ -3,6 +3,8 @@
 import { UserButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import Image from "next/image";
+
 
 const Navbar = () => {
   const { isSignedIn, user, isLoaded } = useUser();
@@ -14,7 +16,13 @@ const Navbar = () => {
   return (
     <div className="flex justify-between border-b bg-slate-600/60">
       <Link href="/" className="text-4xl font-bold px-8 py-2">
-        Logo
+      <Image src="/flameboy.png"
+            className="rounded border-black size-19"
+            width={50}
+            height={50}
+            alt=""
+          
+          />
       </Link>
       <div className="px-6 py-4">
         {isSignedIn ? (

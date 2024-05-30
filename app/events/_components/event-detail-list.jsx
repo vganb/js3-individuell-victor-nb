@@ -58,8 +58,6 @@ const EventDetailList = ({ id }) => {
 
     try {
       const payload = { email: user.emailAddresses[0].emailAddress, eventId: id };
-      console.log(user.emailAddresses[0].emailAddress);
-      console.log(id);
       console.log("Sending booking request with payload:", payload);
 
       const response = await axios.post("http://localhost:3000/api/booking", payload, {
