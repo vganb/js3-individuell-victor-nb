@@ -1,9 +1,14 @@
+
 import Image from "next/image"
 import Link from "next/link"
 
 
 const EventListItem = ({ event }) => {
+
     return (
+
+  
+            
         <Link href={`/events/${event.id}`} className="border rounded-lg overflow-hidden flex">
             <div className="aspect-square h-32">
                 <Image
@@ -21,6 +26,7 @@ const EventListItem = ({ event }) => {
                 <p className="text-sm font-semibold text-muted-foreground">{event.city}</p>
             </div>
         </Link>
+
   )
 }
 export default EventListItem
