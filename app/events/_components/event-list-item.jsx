@@ -15,9 +15,10 @@ const EventListItem = ({ event }) => {
                 />
 
             </div>
-            <div className="p-4 flex flex-col justify-between">
-                <p className="font-semibold text-lg">{event.title}</p>
+            <div className="p-4 flex flex-col">
+                <p className="font-semibold text-2xl">{event.title}</p>
                 <p className="text-sm text-muted-foreground">{event.date}</p>
+                <p className="text-sm font-semibold text-muted-foreground">{event.city}</p>
             </div>
         </Link>
   )

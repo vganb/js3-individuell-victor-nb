@@ -8,7 +8,7 @@ const EventPage = () => {
 
   return (
     <div className="flex flex-col p-6">
-      <PageHeadline>Events</PageHeadline>
+      <PageHeadline>All Events</PageHeadline>
 
       <div className="justify-center mx-40">
 

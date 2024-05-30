@@ -44,21 +44,7 @@ const EventDetailList = ({ id }) => {
     getEvent();
   }, [id, user]);
 
-  // const handleBooking = async () => {
-  //   try {
-      // if (availableSeats === undefined) {
-      //   throw new Error('Available seats is undefined');
-      // }
-  
-      // await bookEvent(user.email, id);
-  //     await bookEvent(user.primaryEmailAddress.emailAddress, id);
 
-  //     setAvailableSeats(prevSeats => prevSeats - 1);
-  //     setIsBooked(true);
-  //   } catch (err) {
-  //     setError(err.message);
-  //   }
-  // };
 
   const handleBooking = async () => {
     if (isBooked) {
@@ -99,24 +85,7 @@ const EventDetailList = ({ id }) => {
     }
   };
 
-  
 
-
-  // const handleCancelBooking = async () => {
-  //   try {
-  //     await cancelBooking(user.emailAddresses[0].emailAddress, id);
-  //     setAvailableSeats(prevSeats => prevSeats + 1);
-  //     setIsBooked(false);
-
-  //     setEvent(prevEvent => ({
-  //       ...prevEvent,
-  //       attendees: prevEvent.attendees.filter(email => email !== user.emailAddresses[0].emailAddress)
-  //     }));
-
-  //   } catch (err) {
-  //     setError(err.message);
-  //   }
-  // };
 
 
   const handleCancelBooking = async () => {
