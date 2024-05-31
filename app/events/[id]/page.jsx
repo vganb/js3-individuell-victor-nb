@@ -1,6 +1,5 @@
 'use client'
 
-import PageHeadline from "@/components/page-headline"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import EventDetailList from "../_components/event-detail-list"
