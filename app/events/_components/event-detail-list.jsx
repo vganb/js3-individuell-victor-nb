@@ -55,7 +55,6 @@ const EventDetailList = ({ id }) => {
     //   return;
     // }
 
-
     try {
       const payload = { email: user.emailAddresses[0].emailAddress, eventId: id };
       console.log("Sending booking request with payload:", payload);

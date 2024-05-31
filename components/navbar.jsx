@@ -29,13 +29,13 @@ const Navbar = () => {
           <div className="flex gap-8 items-center">
             <div>Hello {user.fullName}!</div>
             <Link href="/events">
-              <Button className="px-6 py-1 rounded-lg border">
+              <Button className="px-6 py-1 rounded-lg">
                 Events
             </Button>
             </Link>
 
             <Link href="/dashboard">
-            <Button className="px-6 py-1 rounded-lg border-spacing-0">
+            <Button className="px-6 py-1 rounded-lg">
               Dashboard</Button>
             </Link>
             <UserButton fallbackRedirectUrl="/" />

@@ -6,9 +6,12 @@ import { Button } from "./ui/button"
 
 const Header = () => {
   return (
-      <div className="p-5">
-            <h1>Welcome to Evento</h1>
-          <p>Join us and see all upcoming events and add your own events</p>
+      <div className="flex flex-col items-center p-10 border rounded-lg">
+            <h1 className="text-3xl font-bold">Welcome to Evento</h1>
+      <p className="m-4">Book our awesome event today!</p>
+      <Link href="/events">
+        <Button>Get started</Button>
+      </Link>
      </div>
   )
 }
