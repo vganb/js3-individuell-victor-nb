@@ -12,7 +12,6 @@ const EventDetailPage = ({ params }) => {
   return (
 
     <div className="">
-      <PageHeadline>hello</PageHeadline>
       
       <div className="flex justify-end  mx-20 mt-6">
       <Button>

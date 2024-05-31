@@ -43,11 +43,11 @@ const [selectedMonth, setSelectedMonth] = useState('All')
 
   const filteredEvents = data.filter(event => {
     const eventDate = new Date(event.date);
-    const eventMonth = eventDate.getMonth() + 1; // getMonth() returns a 0-based month
-    const currentDate = new Date(); // get the current date
+    const eventMonth = eventDate.getMonth() + 1; 
+    const currentDate = new Date(); 
     return (selectedCity === 'All' || event.city === selectedCity) &&
       (selectedMonth === 'All' || eventMonth === parseInt(selectedMonth)) &&
-      eventDate >= currentDate; // only include events that are in the future
+      eventDate >= currentDate; 
   });
 
   const sortedEvents = filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date));

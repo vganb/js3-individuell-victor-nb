@@ -1,11 +1,9 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { getDocumentById, bookEvent, cancelBooking } from "@/lib/firebaseUtils";
 import Image from "next/image";
 import { useUser } from "@clerk/clerk-react";
 import axios from "axios";
-import clsx from "clsx";
 import { Button } from "@/components/ui/button";
 
 const EventDetailList = ({ id }) => {
