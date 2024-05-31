@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import EventListItem from "./event-list-item"
-// import { getCollection } from "@/lib/firebaseUtils"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 import axios from "axios"
@@ -49,9 +48,9 @@ const [selectedMonth, setSelectedMonth] = useState('All')
     return (selectedCity === 'All' || event.city === selectedCity) &&
       (selectedMonth === 'All' || eventMonth === parseInt(selectedMonth)) &&
       eventDate >= currentDate; // only include events that are in the future
-
   });
 
+  const sortedEvents = filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return (
 
@@ -72,7 +71,7 @@ const [selectedMonth, setSelectedMonth] = useState('All')
     </SelectGroup>
         </SelectContent>
       </Select>
-        {/* Months */}
+
       <Select onValueChange={value => setSelectedMonth(value)}>
   <SelectTrigger>
     <SelectValue placeholder="Select a month" />
@@ -88,7 +87,7 @@ const [selectedMonth, setSelectedMonth] = useState('All')
 </Select>
       </div>
 
-      {filteredEvents.map(event => (
+      {sortedEvents.map(event => (
         <div key={event.id} className="my-4">
           <EventListItem event={event}/>
         </div>
