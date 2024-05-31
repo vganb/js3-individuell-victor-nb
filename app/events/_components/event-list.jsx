@@ -37,14 +37,15 @@ const [selectedMonth, setSelectedMonth] = useState('All')
     return <div>loading...</div>
   }
 
-  const cities = [...new Set(data.map(event => event.city))];
+  const currentDate = new Date();
+  const futureEvents = data.filter(event => new Date(event.date) >= currentDate);
+  const cities = [...new Set(futureEvents.map(event => event.city))];
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
   const filteredEvents = data.filter(event => {
     const eventDate = new Date(event.date);
     const eventMonth = eventDate.getMonth() + 1; 
-    const currentDate = new Date(); 
     return (selectedCity === 'All' || event.city === selectedCity) &&
       (selectedMonth === 'All' || eventMonth === parseInt(selectedMonth)) &&
       eventDate >= currentDate; 
